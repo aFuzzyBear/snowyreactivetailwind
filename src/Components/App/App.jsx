@@ -10,12 +10,15 @@ function App() {
   }, [count, setCount]);
   // Return the App component.
   return (
-    <div className="App prose bg-red-500">
-      <header className="App-header">
-        <p>
-          Page has been open for <code>{count}</code> seconds.
-        </p>
-      </header>
+    <div className="flex items-center h-100">
+      <div className="flex-col dialog-box ">
+        <header className="text-4xl">
+          Welcome to your Snowy Reactive Tailwinds App
+        </header>
+          <p className="text-3xl">
+            Page has been open for <code>{count}</code> seconds.
+          </p>
+      </div>
     </div>
   );
 }
