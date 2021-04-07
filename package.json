@@ -1,8 +1,8 @@
 {
   "scripts": {
     "start": "snowpack dev",
-    "watcher": "postcss tailwind.css -o public/style.css -w",
-    "prebuild": "tailwindcss build tailwind.css -o public/style.css",
+    "tailwinds": "postcss index.css -o public/style.css -w",
+    "prebuild": "tailwindcss build index.css -o public/style.css",
     "build": "snowpack build",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1"
   },

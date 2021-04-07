@@ -1,5 +1,8 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
+  alias:{
+    "components":"./src/Components"
+  },
   mount: {
     public: '/',
     src:'/dist',
@@ -35,5 +38,6 @@ module.exports = {
   },
   buildOptions: {
     /* ... */
+    clean:true
   },
 };
