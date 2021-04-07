@@ -1,10 +1,15 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
-    /* ... */
+    public: '/',
+    src:'/dist',
   },
   plugins: [
     /* ... */
+    '@snowpack/plugin-react-refresh',
+    "@snowpack/plugin-postcss",
+    // '@snowpack/plugin-webpack',
+
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
@@ -13,9 +18,17 @@ module.exports = {
   optimize: {
     /* Example: Bundle your final build: */
     // "bundle": true,
+    bundle: true,
+    manifest:true,
+    minify:true,
+    sourcemap:true,
+    target:'es2020',
+    treeshake:true,
+
   },
   packageOptions: {
     /* ... */
+    // source:'remote'
   },
   devOptions: {
     /* ... */
